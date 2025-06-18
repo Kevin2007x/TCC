@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #58cc02;
+            font-size: 28px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .profile-picture {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .profile-picture img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #58cc02;
+        }
+
+        .edit-button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #58cc02;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .edit-button:hover {
+            background-color: #4caf50;
+        }
+
+        .profile-info h2 {
+            margin: 0;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .profile-info p {
+            margin: 5px 0 15px;
+            color: #777;
+        }
+
+        .progress-container {
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+            margin-bottom: 5px;
+        }
+
+        .progress {
+            background-color: #58cc02;
+            height: 100%;
+            border-radius: 5px;
+            width: 75%;
+        }
+
+        .settings-section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            color: #58cc02;
+        }
+
+        .edit-section-button {
+            background-color: #58cc02;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .edit-section-button:hover {
+            background-color: #4caf50;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .form-group p {
+            margin: 5px 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Perfil do Usuário</h1>
+        </header>
+        <main>
+            <section class="profile-section">
+                <div class="profile-picture">
+                    <img src="profile-picture.jpg" alt="Foto de Perfil">
+                    <button class="edit-button" onclick="window.location.href='edit_profile.html'">Editar Foto</button>
+                </div>
+                <div class="profile-info">
+                    <h2>Nome do Usuário</h2>
+                    <p>email@exemplo.com</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <p>75% do perfil completo</p>
+                    </div>
+                </div>
+            </section>
+            <section class="settings-section">
+                <div class="section-title">
+                    <h2>Informações Pessoais</h2>
+                    <button class="edit-section-button" onclick="window.location.href='profile.html'">Fazer Alteração</button>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <p>Nome do Usuário</p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <p>email@exemplo.com</p>
+                </div>
+                <div class="form-group">
+                    <label for="language">Idioma:</label>
+                    <p>Português</p>
+                </div>
+            </section>
+            <section class="settings-section">
+                <div class="section-title">
+                    <h2>Configurações da Conta</h2>
+                    <button class="edit-section-button" onclick="window.location.href='account.html'">Fazer Alteração</button>
+                </div>
+                <div class="form-group">
+                    <label for="account-email">Email da Conta:</label>
+                    <p>email@exemplo.com</p>
+                </div>
+                <div class="form-group">
+                    <label for="account-phone">Telefone:</label>
+                    <p>(00) 1234-5678</p>
+                </div>
+                <div class="form-group">
+                    <label for="account-address">Endereço:</label>
+                    <p>Rua Exemplo, 123</p>
+                </div>
+            </section>
+            <section class="settings-section">
+                <div class="section-title">
+                    <h2>Configurações de Privacidade</h2>
+                    <button class="edit-section-button" onclick="window.location.href='privacy.html'">Fazer Alteração</button>
+                </div>
+                <div class="form-group">
+                    <label for="privacy-settings">Configurações de Privacidade:</label>
+                    <p>Privado</p>
+                </div>
+                <div class="form-group">
+                    <label for="data-sharing">Compartilhamento de Dados:</label>
+                    <p>Desativado</p>
+                </div>
+                <div class="form-group">
+                    <label for="location-sharing">Compartilhamento de Localização:</label>
+                    <p>Desativado</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
